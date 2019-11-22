@@ -1,0 +1,36 @@
+Locations
+
+INSERT INTO `location`(`address`, `img`) VALUES 
+("Kettenbrückengasse 19, 1050 Vienna", "http://www.lemonleaf.at/images/gallery-seeda2.jpg"),
+("1050 Wien, Schönbrunner Straße 21", "https://img.static-bookatable.com/f9262a6d-3348-47ec-9e25-c13b3bad97e4.jpg?404=bat2%2F404-restaurant.jpg&height=466&width=700&quality=75&mode=crop&scale=both&id=4855bace-bad5-4994-a104-6a665ecf87b2.jpg"),
+("Barnabitengasse 3, 1060 Wien", "http://www.wienbilder.at/i/pizzeriagelateriafrascanti.jpg"),
+("Mariahilfer Str. 42-48, 1070 Wien", "https://akakiko.at/images/rests/GERN_2.jpg?1424952390"),
+("Karlsplatz 1, 1010 Vienna", "http://www.karlskirche.at/images/karlskirche.jpg"),
+("Maxingstraße 13b, 1130 Wien", "https://cdn.getyourguide.com/img/tour_img-2529078-146.jpg"),
+("Stephansplatz 3, 1010 Wien", "https://www.ingenieur.de/wp-content/uploads/2019/09/panthermedia_B3550023_1000x667-1-e1567519079544-980x490.jpg"),
+("Michaelerkuppel 1010 Vienna", "https://www.planetware.com/photos-large/A/hofburg-2.jpg"),
+("Wiener Stadthalle, Halle F, Roland Rainer Platz 1, 1150 Wien", "http://kriskristofferson.com/dev/wp-content/uploads/2013/06/C209C86E-EE10-4E9F-B495-AD773AA15D16-1024x1024.png"),
+("Wiener Stadthalle, Halle D, Roland Rainer Platz 1, 1150 Wien", "https://www.stadthalle.com/tools/imager/imager.php?file=%2Fmedia%2Fimage%2Foriginal%2F2582.jpg&height=750"),
+("Opernring 2, 1010 Wien", "https://thumbs.vol.at/?url=https://www.vol.at/2016/11/Staatsoper-direktion-ausschreibung.jpg&w=428&h=321&crop=1"),
+("Währinger Str. 78, 1090 Wien", "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Wien_-_Volksoper.JPG/1280px-Wien_-_Volksoper.JPG")
+
+Restaurants
+INSERT INTO `restaurants`(`locationID`, `name`, `type`, `description`, `url`, `telephone`) VALUES 
+(1, "Lemon Leaf", "Thai", "Awesome and delicious Thai restaurant in Vienna", "http://www.lemonleaf.at/index.html", "+43(1)5812308"),
+(2, "Sixta", "Viennese", "Authentic viennese restaurant", "http://www.sixta-restaurant.at/", "+43 1 58 528 56 l +43 1 58 528 56"),
+(3, "Frascati Pizzeria Gelateria", "Italian", "Italian restaurant well-known for its huge and delicious pizzas", "http://www.pizzeria-frascati.com/", "01 5872981"),
+(4, "Akakiko", "Asian", "Various asian foods in a modern, european fusion kitchen style", "https://akakiko.at/lokale/gerngross", "057 333 150")
+
+Places
+INSERT INTO `things`(`locationID`, `name`, `type`, `description`, `url`) VALUES 
+(5, "St. Charles Church", "Historical Site", "A magnificent religious building with a large cupola: St. Charles' Church, the last work of the eminent baroque architect Johann Bernhard Fischer von Erlach.", "https://www.wien.info/en/sightseeing/sights/from-g-to-k/st-charles-church"),
+(6, "Vienna Zoo", "Zoo", "Zoo Vienna, the oldest existing zoo in the world founded in 1752. Schonbrunn Zoo was voted Europe's best in 2008, 2010 and 2012.", "https://www.zoovienna.at/"),
+(7, "St. Stephen's Cathedral", "Must see", "Welcome to the website of the St. Stephen’s Cathedral in Vienna. Experience the cathedral’s great diversity, its history, its works of art, and its religious dimension as the spiritual centre of the city. The cathedral is faith set in stone that has shaped people’s lives for centuries.","https://www.stephanskirche.at/"),
+(8, "Imperial Hofburg Palace", "Historical Site", "The Hofburg is the former principal imperial palace of the Habsburg dynasty rulers and today serves as the official residence and workplace of the President of Austria.", "https://www.hofburg-wien.at/en/")
+
+Concerts
+INSERT INTO `concerts`(`locationID`, `name`, `eventDate`, `eventTime`, `price`, `type`, `description`, `url`, `telephone`) VALUES 
+(9, "Kris Kristoffersen", "2019-11-15", "20:00", 58.50, "Concert", "Over a period of a few years Kris Kristofferson wrote his most famous songs: “Me and Bobby McGee”, “Sunday Morning Coming Down”, “For the Good Times”, and “Help Me Make It Through the Night”.", "http://www.jazzfest.wien/en/events/kris-kristofferson/", "01-588 85"),
+(10, "Lenny Kravitz", "2019-12-09", "19:30", 47.80, "Concert", "Leonard Albert Kravitz (born May 26, 1964) is an American singer, songwriter, actor, record producer, and multi-instrumentalist.", "https://www.stadthalle.com/en/schauen/events/587/Lenny-Kravitz", "01-588 85"),
+(11, "Tosca", "2019-12-03", "19:30", 65.00, "Opera", "Opera by Giacomo Puccini", "https://www.culturall.com/ticket/isto/performance_schedule.mc?language=2", "+43 1 7125400"),
+(12, "The Magic Flute", "2019-11-28", "19:00", 45.00, "Opera", "Opera by Wolfgang Amadeus Mozartin German language with English surtitles", "https://www.volksoper.at/volksoper_wien/index.en.php", "+43/1/514 44-3670")
