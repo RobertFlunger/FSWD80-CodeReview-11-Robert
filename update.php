@@ -75,6 +75,7 @@ if (isset($_GET['concertID'])) {
   </div>
 </form>
 </div>
+</div>
 
 <?php 
   include('components/footer.php');

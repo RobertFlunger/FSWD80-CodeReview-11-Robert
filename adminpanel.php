@@ -11,18 +11,23 @@ if ( isset($_SESSION['user'])) {
 include("components/head.php");
 include("components/navbar.php");
 
-echo '<div class="container mt-3">
-<div class="card-columns">';
+?>
+
+<a href="create.php?category=restaurant"><button type="button" class="btn btn-dark">New Restaurant</button></a>
+<a href="create.php?category=thing"><button type="button" class="btn btn-dark">New Thing to Do</button></a>
+<a href="create.php?category=concert"><button type="button" class="btn btn-dark">New Concert</button></a>
+
+<div class="container mt-3">
+<div class="card-columns">
+
+<?php
 
 include('components/cards.php');
 displayConcerts();
 displayThings();
 displayRestaurants();
 
-echo '</div>
-</div>';
-
-/*createTable(runQuery('*', 'concerts', 'INNER JOIN location ON concerts.locationID = location.ID'));*/
+echo '</div></div>';
 
 include("components/footer.php");
 ?>
