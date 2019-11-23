@@ -1,8 +1,9 @@
 <?php
 
-function displayConcerts() {
 
-$sql = "SELECT * FROM concerts INNER JOIN location ON concerts.locationID = location.ID";
+function displayConcerts($sql) {
+/*$sql = "SELECT * FROM concerts INNER JOIN location ON concerts.locationID = location.ID";*/
+
 global $conn;
 $result = $conn->query($sql);
 
@@ -23,21 +24,19 @@ if ( $result -> num_rows > 0) {
 				      	Price: ' .$row['price']. '€ <br>
 				      	For more informations call: ' .$row['telephone']. '</p>
 				      	<a href="' .$row['url']. '"><button type="button" class="btn btn-info mb-3">Get Your Tickets online!</button></a><br>
-				      	<a href="#" data-toggle="modal" data-target="mapModal-' .$row['address']. 'class="btn btn-success">Open Map</a>';
-  			// https://stackoverflow.com/questions/11003679/dynamically-load-information-to-twitter-bootstrap-modal
+				      	<button type="button" data-id="' .$row['address']. '" data-toggle="modal" data-target="#mapModal" class="btn btn-success">Open Map</button>';
   			if ( isset($_SESSION['admin']) ) {
   				echo "<a href='update.php?concertID=" .$row['ID']. "'><button type='button' class='btn btn-warning mb-3'>Edit</button></a>
-					<a href='delete.php?concertID=" .$row['ID']. "&category=concert'><button type='button' class='btn btn-danger mb-3'>Delete</button></a>
-					</div>
-  				</div>";
+					<a href='delete.php?ID=" .$row['ID']. "&category=concert'><button type='button' class='btn btn-danger mb-3'>Delete</button></a>";
+				}
+				echo "</div></div>";
   			}	
 		}
-	}
-};
+	};
 
-function displayRestaurants() {
+function displayRestaurants($sql) {
 
-$sql = "SELECT * FROM restaurants INNER JOIN location ON restaurants.locationID = location.ID";
+/*$sql = "SELECT * FROM restaurants INNER JOIN location ON restaurants.locationID = location.ID";*/
 global $conn;
 $result = $conn->query($sql);
 
@@ -59,17 +58,16 @@ if ( $result -> num_rows > 0) {
   			
   			if ( isset($_SESSION['admin']) ) {
   				echo "<a href='update.php?restaurantID=" .$row['ID']. "'><button type='button' class='btn btn-warning mb-3'>Edit</button></a>
-					<a href='delete.php?restaurantID=" .$row['ID']. "&category=restaurant'><button type='button' class='btn btn-danger mb-3'>Delete</button></a>
-					</div>
-  				</div>";
+					<a href='delete.php?ID=" .$row['ID']. "&category=restaurant'><button type='button' class='btn btn-danger mb-3'>Delete</button></a>";
+				}
+				echo "</div></div>";
   			}
 		}
-	}
-};
+	};
 
-function displayThings() {
+function displayThings($sql) {
 
-$sql = "SELECT * FROM things INNER JOIN location ON things.locationID = location.ID";
+/*$sql = "SELECT * FROM things INNER JOIN location ON things.locationID = location.ID";*/
 global $conn;
 $result = $conn->query($sql);
 
@@ -90,13 +88,12 @@ if ( $result -> num_rows > 0) {
 	      	
 	      	if ( isset($_SESSION['admin']) ) {
   				echo "<a href='update.php?thingsID=" .$row['ID']. "'><button type='button' class='btn btn-warning mb-3'>Edit</button></a>
-					<a href='delete.php?thingsID=" .$row['ID']. "&category=thing'><button type='button' class='btn btn-danger mb-3'>Delete</button></a>
-					</div>
-  				</div>";
+					<a href='delete.php?ID=" .$row['ID']. "&category=thing'><button type='button' class='btn btn-danger mb-3'>Delete</button></a>";
+				}
+				echo "</div></div>";
   			}
 		}
-	}
-};
+	};
 
 ?>
 

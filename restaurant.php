@@ -17,11 +17,18 @@ if ( !isset($_SESSION['user']) && !isset($_SESSION['admin'])) {
  ?>
 
 <div class="container mt-3">
-<div class="card-columns">
+<div class="card-columns" id="searchcontent">
+<?php include("searchbar.php"); ?>
+</div>
+</div>
+
+<div class="container mt-3">
+<div class="card-columns" id="allcards">
 
 <?php
-	include("components/cards.php");
-	displayRestaurants();
+	require_once("components/cards.php");
+	$sql = "SELECT * FROM restaurants INNER JOIN location ON restaurants.locationID = location.ID";
+	displayRestaurants($sql);
 ?>
 
 </div>

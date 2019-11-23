@@ -15,6 +15,12 @@
       <li class="nav-item">
         <a class="nav-link" href="event.php">Events/Things to do</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="gmaps.php">Location Map</a>
+      </li>
+      <form class="form-inline" id="searchbar">
+        <input class="form-control" type="search" placeholder="Search for name or address" aria-label="search" id="search" name="search"/>
+      </form>
     </ul>
 
     <ul class="nav navbar-nav ml-auto">

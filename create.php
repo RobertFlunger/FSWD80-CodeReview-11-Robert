@@ -11,7 +11,8 @@ if ( isset($_SESSION['user'])) {
 include("components/head.php");
 include("components/navbar.php");
 
-$category = $_GET('category');
+$category = $_GET['category'];
+echo $category;
 
 ?>
 
@@ -40,14 +41,14 @@ $category = $_GET('category');
         <input type="text" class="form-control" name="eventtime" placeholder="Hr:Min">';
       } ?>      
       <label for="description">Description:</label>
-      <input type="text" class="form-control" name="description" value="<?php echo $data["description"]; ?>">
+      <input type="text" class="form-control" name="description" placeholder="Restaurant description">
      </div>
     <div class="card-footer">
-      <?php if ($category == 'concert')) { echo '
+      <?php if ($category == 'concert') { echo '
         <label for="price">Price:</label>
         <input type="text" class="form-control" name="price" placeholder="Price in €">'; }
       ?>
-      <?php if ($category == 'thing') { echo '<label for="phone">Phone:</label>
+      <?php if ($category != 'thing') { echo '<label for="phone">Phone:</label>
         <input type="text" class="form-control" name="phone" placeholder="Phone Number">'; }
       ?>
       <label for="url">URL:</label>
