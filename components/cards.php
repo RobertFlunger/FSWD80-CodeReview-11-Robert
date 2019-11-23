@@ -23,8 +23,7 @@ if ( $result -> num_rows > 0) {
 				      	<p class="card-text">
 				      	Price: ' .$row['price']. '€ <br>
 				      	For more informations call: ' .$row['telephone']. '</p>
-				      	<a href="' .$row['url']. '"><button type="button" class="btn btn-info mb-3">Get Your Tickets online!</button></a><br>
-				      	<button type="button" data-id="' .$row['address']. '" data-toggle="modal" data-target="#mapModal" class="btn btn-success">Open Map</button>';
+				      	<a href="' .$row['url']. '"><button type="button" class="btn btn-info mb-3">Get Your Tickets online!</button></a><br>';
   			if ( isset($_SESSION['admin']) ) {
   				echo "<a href='update.php?concertID=" .$row['ID']. "'><button type='button' class='btn btn-warning mb-3'>Edit</button></a>
 					<a href='delete.php?ID=" .$row['ID']. "&category=concert'><button type='button' class='btn btn-danger mb-3'>Delete</button></a>";

@@ -89,7 +89,6 @@ if ( isset($_POST['btn-signup']) ) {
 	if ( !($error) ) {
 		$query = "INSERT INTO users(name, email, pass) 
 					VALUES ('$name', '$email', '$password')";
-		echo $query;
 		$result = mysqli_query($conn, $query);
 
 		if ( $result ) {
