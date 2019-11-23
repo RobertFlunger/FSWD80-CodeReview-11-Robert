@@ -1,4 +1,8 @@
 # FSWD80-CodeReview-11-Robert
+Admin: robert@robert.at; password: Robert123!
+User: user@user.com; password: User123!
+(passwords are case sensitive)
+
 Code Review 11 for Fullstack Web Developer Bootcamp @CodeFactory Vienna
 
 Includes:
